@@ -1,1 +1,30 @@
 @use '../node_modules/bootstrap/scss/bootstrap.scss';
+
+body {
+    background-color: #212121;
+}
+
+
+.row {
+    color: white;
+}
+
+
+.imgSos {
+    height: 12px;
+}
+
+
+.imgLogo img{
+    width: 100px;
+}
+
+svg {
+    fill: yellow;
+    height: 10px;
+    width: 10px;
+}
+
+header {
+    background-color: black
+}
