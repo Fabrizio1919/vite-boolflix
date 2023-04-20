@@ -32,24 +32,20 @@ export default {
 <template>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
         <div class="col" v-for="(movie, index) in state.fetchedMovies">
-            <h3> Movie {{ index }}</h3>
+            <h5 class="text-center"> Movie {{ index }}</h5>
             <div class="imgMovies">
                 <img v-show="movie.poster_path" :src="`${state.imageBaseUrl}${movie.poster_path}`"
                     :alt="`${movie.title} cover image`">
             </div>
-            <div class="infoMovie">
-                <p>Title: {{ movie.title }}</p>
-                <p>Original title: {{ movie.original_title }}</p>
-                <p class="d-flex align-items-center">
-                <p>Language: <country-flag :country="flagLingue(movie.original_language)" /></p>
-                </p>
-                <p v-html="state.generateStars(state.generateScore1_5(movie.vote_average))"></p>
-            </div>
-            <div class="overviewMovies">
-                <p> Overview : {{ movie.overview }}</p>
-            </div>
-
-           
+            <ul class="info">
+                <li>Title: {{ movie.title }}</li>
+                <li>Original title: {{ movie.original_title }}</li>
+                <li class="d-flex align-items-center">
+                <li>Language: <country-flag :country="flagLingue(movie.original_language)" /></li>
+                </li>
+                <li v-html="state.generateStars(state.generateScore1_5(movie.vote_average))"></li>
+                <li> Overview : {{ movie.overview }}</li>
+            </ul>   
         </div>
     </div>
 </template>
