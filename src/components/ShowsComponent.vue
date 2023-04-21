@@ -34,8 +34,9 @@ export default {
         <div class="col" v-for="(tvShow, index) in state.fetchedTvShows">
             <h5 class="text-center"> Tv Show {{ index }}</h5>
             <div class="imgShow">
-                <img v-if="tvShow.poster_path" :src="`${state.imageBaseUrl}${tvShow.poster_path}`"
+                <img v-if="tvShow.poster_path === null" src="https://media.moddb.com/images/mods/1/31/30364/the-100-53772df520798.jpg"
                     :alt="`${tvShow.title} cover image`">
+                    <img :src="`${state.imageBaseUrl}${tvShow.poster_path}`" alt="">
             </div>
             <ul class="info">
                 <li>Title: {{ tvShow.name }}</li>
