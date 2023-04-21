@@ -54,5 +54,7 @@ export const state = new reactive({
     }
     // RITORNA LA VARIBILE SIA LE STELLE PIENE CHE LE STELLE VUOTE 
     return starTotal
-  }
+  },
+  
+
 })

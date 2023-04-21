@@ -19,7 +19,9 @@ body {
 }
 .col:hover .info {
     display: block;
-    opacity: 1;    
+    overflow-y: scroll;
+    height: 90%;  
+    background-color: rgba(0, 0, 0, 0.462);
 }
 
 .imgMovies img {
@@ -51,16 +53,14 @@ header {
     box-shadow: 0px 6px 7px red;
 }
 .col {
-    position: relative;
-    overflow-y: hidden;
-    
+    position: relative;    
 }
 
 .info {
     display: none;
     position: absolute;
-    top: 50px;
-     left: 0px;
+    top: 32px;
+    left: -11px;
      
 }
 
@@ -74,4 +74,39 @@ header {
 
 li {
     list-style: none;
+}
+
+
+footer {
+
+li a {
+    list-style: none;
+    color: gray;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+    color: white;
+    
+}
+
+button {
+    background-color: #212121;
+    color: gray;
+    border: 1px solid gray;
+}
+button:hover {
+    color: white;
+}
+
+.itemFtw {
+    display: flex;
+    gap: 8px;
+    margin-left: 35px;
+}
+.itemFtw a {
+
+}
+
 }
